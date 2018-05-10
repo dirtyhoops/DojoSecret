@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="showheader">
+            <div class="commentheader">
+                <h1> Comment on this secret</h1>
+            </div>
+            <div class="headertag">
+                <a href="/secret">Home</a> | <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="commentform">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th><h4><%= thesecret[0].secret %></h4></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let x of thesecret[0].comments) { %>
+                    <tr>
+                        <td><%= x.comment %></td>
+                    </tr>
+                    <% } %>
+                    <tr>
+                        <td>
+                            <form action="/secret/<%= thesecret[0]._id %>/comment" method="post">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="2" id="comment" name="comment" placeholder="Leave your comment here!"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Comment!</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> <!-- end of container -->
+    
+</body>
+</html>

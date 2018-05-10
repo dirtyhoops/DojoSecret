@@ -14,3 +14,60 @@
 .insideboxmargin {
     margin: 10px;
 }
+
+/* secret.ejs styling */
+.secretform {
+    width: 90%;
+    border: 1px solid rgb(233, 226, 226);
+    padding: 10px;
+}
+
+.secretsdiv {
+    width: 75%;
+    margin-top: 20px;
+}
+
+.secretheader {
+    border-bottom: 3px solid rgb(157, 157, 238)
+}
+
+.dojoheader h1, .dojoheader a {
+    display: inline-block;
+}
+.dojoheader a {
+    margin-left: 62%;
+}
+
+.dojoheader form {
+    vertical-align: middle;
+}
+
+.secretformstyle {
+    width: 75%;
+    margin: 5px;
+}
+
+td a {
+    color: black;
+}
+
+/* show.ejs styling */
+.commentform {
+    width: 80%;
+}
+
+.headertag, .commentheader {
+    display: inline-block;
+}
+
+.headertag {
+    vertical-align: middle;
+}
+
+.derp{
+    height: 100px;
+    width: 100px;
+    border: 2px solid greenyellow;
+    background-color: red;
+    color:white;
+}
